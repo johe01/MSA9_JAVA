@@ -10,10 +10,20 @@ public class _1505 {
 		int arr[][]= new int [n][n];
 		int sum=1;
 		int temp = 0;
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr[i].length; j++) {
-				arr[i][j]=sum;
-			}
+		for (int a = 0; a < arr[0].length; a++) {
+			arr[0][a]=sum;
+			sum++;
+		}
+		for (int b = 1; b < arr.length; b++) {
+			arr[b][n-1]=sum;
+			sum++;
+		}
+		for (int a = 1; a < arr[0].length; a++) {
+			arr[n-1][n-1-a]=sum;
+			sum++;
+		}
+		for (int b = 2; b < arr.length; b++) {
+			arr[n-b][0]=sum;
 		}
 	}
 }
