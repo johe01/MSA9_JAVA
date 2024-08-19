@@ -1,5 +1,7 @@
 package Day07.Review;
 
+import java.util.Random;
+
 public class Ex04_Lotto {
 
 	public static void main(String[] args) {
@@ -54,6 +56,11 @@ public class Ex04_Lotto {
 			System.out.print(i + " ");
 		}
 		System.out.println();
+		Random random1 = new Random();
+		for (int i = 0; i < 15; i++) {
+			System.out.println(random1.nextInt(10)+1);
+			
+		}
 
 	}
 }
