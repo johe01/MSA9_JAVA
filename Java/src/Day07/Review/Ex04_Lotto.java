@@ -1,7 +1,5 @@
 package Day07.Review;
 
-import java.util.Random;
-
 public class Ex04_Lotto {
 
 	public static void main(String[] args) {
@@ -31,35 +29,34 @@ public class Ex04_Lotto {
 
 		// 1~45 사이의 랜덤수
 		int arr[] = new int[6];
-		
-		// 중복제거, 
+
+		// 중복제거,
 		// (과제) 오름차순 정렬
 		for (int i = 0; i < arr.length; i++) {
 			int rand3 = (int) (Math.random() * 45) + 1;
+			arr[i]=rand3;
 			
-			for(int j=i-1;j>=0;j--) {
-				if(arr[j] == rand3) {
+			for (int j=0; j<i; j++) {
+				// 중복이 되는 경우
+				if(arr[j]== random) {
 					i--;
-					break;
-				}
-				else if(arr[j] < rand3) {
-					arr[i] = rand3;
-				}
-				else {
-					
 				}
 			}
-			
+		}
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] > arr[j]) {
+					// swap
+					// arr[i]와 arr[j] 교환
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
 		}
 
 		for (int i : arr) {
 			System.out.print(i + " ");
-		}
-		System.out.println();
-		Random random1 = new Random();
-		for (int i = 0; i < 15; i++) {
-			System.out.println(random1.nextInt(10)+1);
-			
 		}
 
 	}
