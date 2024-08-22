@@ -1,6 +1,4 @@
-package Day10.Ex01_Lang;
-
-import java.util.Scanner;
+package Day10_12.Ex01_Lang;
 
 public class MathEx {
 	
