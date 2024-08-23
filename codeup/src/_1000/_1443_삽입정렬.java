@@ -23,6 +23,9 @@ public class _1443_삽입정렬 {
 				if(arr[j]>key) {					
 					arr[j+1]=arr[j];
 				}
+				else {	
+					break;
+				}
 			}
 			arr[j+1]=key;
 		}
