@@ -6,20 +6,20 @@ import java.util.List;
 public class Course<T> implements Manager {
 
 	private String name;		// 과정명
-	private List<T> studnts;	// 수강생 목록
+	private List<T> students;	// 수강생 목록
 	
 	public Course() {
 		this.name="";
-		this.studnts = new ArrayList<T>();
+		this.students = new ArrayList<T>();
 	}
 
 	public Course(String name, List<T> studnts) {
 		this.name = name;
-		this.studnts = studnts;
+		this.students = studnts;
 	}	
 
 	public Course(List<T> studnts) {
-		this.studnts = studnts;
+		this.students = studnts;
 	}
 
 	public String getName() {
@@ -32,18 +32,24 @@ public class Course<T> implements Manager {
 	}
 
 
-	public List<T> getStudnts() {
-		return studnts;
+	public List<T> getStudents() {
+		return students;
 	}
 
 
-	public void setStudnts(List<T> studnts) {
-		this.studnts = studnts;
+	public void setStudents(List<T> students) {
+		this.students = students;
+	}
+	/**수강생 추가
+	 * @param t
+	 */
+	public void addStudent(T t) {
+		getStudents().add(t);
 	}
 
 	@Override
 	public String toString() {
-		return "Course [name=" + name + ", studnts=" + studnts + "]";
+		return "Course [name=" + name + ", studnts=" + students + "]";
 	}
 
 	@Override
@@ -70,11 +76,12 @@ public class Course<T> implements Manager {
 	@Override
 	public void printStudentList(Course<?> course) {
 		System.out.println("::::: 과정명 "+course.getName()+" :::::");
-		List<Object> studenList = (List<Object>) course.getStudnts();
+		List<Object> studenList = (List<Object>) course.getStudents();
 		for (Object student : studenList) {
 			System.out.println(student);
 		}
 		System.out.println();
 	}
+	
 	
 }
