@@ -8,7 +8,7 @@ public class ReaderEx {
 	public static void main(String[] args) {
 		// 파일 경로
 		String filePath = "sample.txt";
-		
+		System.out.println("번호\t이름\t성적\t반");
 		try (
 				// FileReader 객체를 사용하여 파일을 문자 단위로 입력
 				FileReader fr = new FileReader(filePath);
