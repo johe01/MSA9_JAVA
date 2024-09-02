@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;CSS/src/application&apos;&#x0D;&#x0A;- Original project: &apos;Exit&apos;&#x0D;&#x0A;- Destination element: &apos;CSS/src/application&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     application.Main.java&#x0D;&#x0A;     Main.fxml" description="Copy elements" destination="=CSS/src&lt;application" element1="src/application/Main.fxml" element2="/src&lt;application{Main.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1725243852353" units="1" version="1.0"/>
+</session>
